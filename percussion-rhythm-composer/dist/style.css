@@ -1,0 +1,380 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  min-height: 100vh;
+  color: #e8e8e8;
+  padding: 20px;
+}
+
+.app {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.header h1 {
+  font-size: 2.5em;
+  background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #a0a0a0;
+  font-size: 1.1em;
+}
+
+.controls,
+.segment-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.control-group label {
+  font-weight: 500;
+  color: #c0c0c0;
+}
+
+input[type="range"] {
+  width: 120px;
+  accent-color: #ff6b6b;
+}
+
+input[type="number"],
+select {
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  width: 80px;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #ff6b6b;
+}
+
+.transport {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a5a);
+  border-color: transparent;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #ff7b7b, #ff6b6b);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  border-color: transparent;
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  border-color: transparent;
+}
+
+.btn-pattern {
+  background: linear-gradient(135deg, #9b59b6, #8e44ad);
+  border-color: transparent;
+}
+
+.tracks-container {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.track:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.track:last-child {
+  margin-bottom: 0;
+}
+
+.track-label {
+  width: 120px;
+  flex-shrink: 0;
+  font-weight: 600;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.track-label.muyu {
+  color: #feca57;
+}
+
+.track-label.gu {
+  color: #ff6b6b;
+}
+
+.track-label.luo {
+  color: #48dbfb;
+}
+
+.track-label.bo {
+  color: #1dd1a1;
+}
+
+.track-controls {
+  display: flex;
+  gap: 5px;
+  margin-right: 15px;
+  width: 80px;
+  flex-shrink: 0;
+}
+
+.track-btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s ease;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.track-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.track-btn.mute.active {
+  background: #e74c3c;
+}
+
+.track-btn.solo.active {
+  background: #f39c12;
+}
+
+.beat-grid {
+  display: flex;
+  gap: 4px;
+  flex-grow: 1;
+  min-width: max-content;
+}
+
+.beat {
+  width: 40px;
+  height: 50px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: 2px solid transparent;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.beat:hover {
+  transform: scale(1.05);
+}
+
+.beat.vel-0 {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.beat.vel-1 {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.beat.vel-2 {
+  background: rgba(255, 107, 107, 0.5);
+  border-color: rgba(255, 107, 107, 0.7);
+}
+
+.beat.vel-3 {
+  background: rgba(255, 107, 107, 0.9);
+  border-color: #ff6b6b;
+  box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+}
+
+.beat.playing {
+  animation: pulse 0.15s ease;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.beat.downbeat {
+  border-left: 3px solid #feca57;
+}
+
+.beat.in-segment {
+  box-shadow: inset 0 0 0 2px rgba(72, 219, 251, 0.5);
+}
+
+.position-marker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: #feca57;
+  pointer-events: none;
+  transition: left 0.05s linear;
+  z-index: 10;
+  border-radius: 2px;
+}
+
+.velocity-panel {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.velocity-panel h3 {
+  margin-bottom: 10px;
+  color: #feca57;
+}
+
+.velocity-panel p {
+  color: #a0a0a0;
+  margin-bottom: 15px;
+}
+
+.velocity-legend {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.velocity-legend span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.velocity-legend .vel-0 { color: #888; }
+.velocity-legend .vel-1 { color: #bbb; }
+.velocity-legend .vel-2 { color: #ff6b6b; }
+.velocity-legend .vel-3 { color: #ff6b6b; font-weight: bold; }
+
+.patterns {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}
+
+.patterns h3 {
+  margin-bottom: 15px;
+  color: #48dbfb;
+}
+
+.pattern-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.8em;
+  }
+
+  .controls,
+  .segment-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .transport {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .track {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .track-label {
+    width: auto;
+  }
+
+  .beat {
+    width: 30px;
+    height: 40px;
+  }
+}

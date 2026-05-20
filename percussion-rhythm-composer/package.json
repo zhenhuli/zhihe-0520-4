@@ -1,0 +1,31 @@
+{
+  "name": "percussion-rhythm-composer",
+  "version": "1.0.0",
+  "description": "民族打击乐节奏编辑器 - 基于 Web Audio API 的多轨节奏创作工具",
+  "main": "dist/bundle.js",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "node server.js",
+    "watch": "rollup -c -w"
+  },
+  "keywords": [
+    "web-audio",
+    "percussion",
+    "rhythm",
+    "composer",
+    "chinese-traditional"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.9.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-serve": "^3.0.0"
+  },
+  "dependencies": {}
+}
