@@ -1,0 +1,73 @@
+export const ingredients = {
+  top: [
+    { id: 'bergamot', name: '佛手柑', family: '柑橘调', color: '#FFD700', intensity: 8, notes: ['清新', '酸甜', '果香'] },
+    { id: 'lemon', name: '柠檬', family: '柑橘调', color: '#FFFF00', intensity: 9, notes: ['明亮', '清新', '酸爽'] },
+    { id: 'orange', name: '甜橙', family: '柑橘调', color: '#FFA500', intensity: 7, notes: ['甜美', '温暖', '多汁'] },
+    { id: 'grapefruit', name: '葡萄柚', family: '柑橘调', color: '#FF6B6B', intensity: 8, notes: ['微苦', '清新', '活力'] },
+    { id: 'mandarin', name: '橘子', family: '柑橘调', color: '#FF8C00', intensity: 6, notes: ['柔和', '清甜', '孩童感'] },
+    { id: 'lime', name: '青柠', family: '柑橘调', color: '#9ACD32', intensity: 8, notes: ['尖锐', '清新', '热带'] },
+    { id: 'pear', name: '梨', family: '果香调', color: '#F0E68C', intensity: 5, notes: ['多汁', '清甜', '脆爽'] },
+    { id: 'apple', name: '苹果', family: '果香调', color: '#FF6347', intensity: 5, notes: ['清新', '甜脆', '自然'] },
+    { id: 'peach', name: '桃子', family: '果香调', color: '#FFDAB9', intensity: 5, notes: ['甜美', '多汁', '少女感'] },
+    { id: 'melon', name: '甜瓜', family: '果香调', color: '#98FB98', intensity: 4, notes: ['水嫩', '清甜', '夏天'] },
+    { id: 'pink_pepper', name: '粉红胡椒', family: '辛香调', color: '#FF69B4', intensity: 7, notes: ['辛辣', '活泼', '现代'] },
+    { id: 'ginger', name: '生姜', family: '辛香调', color: '#DEB887', intensity: 8, notes: ['温暖', '辛辣', '东方'] },
+    { id: 'cardamom', name: '小豆蔻', family: '辛香调', color: '#8FBC8F', intensity: 7, notes: ['芳香', '温暖', '异域'] },
+    { id: 'mint', name: '薄荷', family: '草本调', color: '#00FA9A', intensity: 9, notes: ['清凉', '草本', '提神'] },
+    { id: 'lavender', name: '薰衣草', family: '芳香调', color: '#9370DB', intensity: 6, notes: ['舒缓', '草本', '经典'] },
+    { id: 'rosemary', name: '迷迭香', family: '草本调', color: '#228B22', intensity: 7, notes: ['草本', '清新', '强烈'] }
+  ],
+  middle: [
+    { id: 'rose', name: '玫瑰', family: '花香调', color: '#FF1493', intensity: 8, notes: ['经典', '浪漫', '女人味'] },
+    { id: 'jasmine', name: '茉莉', family: '花香调', color: '#FFFAF0', intensity: 9, notes: ['浓郁', '甜美', '性感'] },
+    { id: 'ylang_ylang', name: '依兰依兰', family: '花香调', color: '#FFFFE0', intensity: 8, notes: ['异域', '浓郁', '热带'] },
+    { id: 'tuberose', name: '晚香玉', family: '花香调', color: '#FAFAD2', intensity: 9, notes: ['浓郁', '甜美', '夜晚'] },
+    { id: 'iris', name: '鸢尾', family: '花香调', color: '#DDA0DD', intensity: 6, notes: ['粉质', '优雅', '高端'] },
+    { id: 'peony', name: '牡丹', family: '花香调', color: '#FFB6C1', intensity: 5, notes: ['柔美', '清新', '绽放'] },
+    { id: 'lily', name: '百合', family: '花香调', color: '#FFFAFA', intensity: 7, notes: ['纯净', '优雅', '神圣'] },
+    { id: 'violet', name: '紫罗兰', family: '花香调', color: '#EE82EE', intensity: 5, notes: ['粉质', '甜美', '复古'] },
+    { id: 'orchid', name: '兰花', family: '花香调', color: '#BA55D3', intensity: 7, notes: ['神秘', '优雅', '异域'] },
+    { id: 'cinnamon', name: '肉桂', family: '辛香调', color: '#D2691E', intensity: 8, notes: ['温暖', '辛辣', '秋冬'] },
+    { id: 'clove', name: '丁香', family: '辛香调', color: '#8B4513', intensity: 9, notes: ['强烈', '温暖', '复古'] },
+    { id: 'nutmeg', name: '肉豆蔻', family: '辛香调', color: '#CD853F', intensity: 7, notes: ['温暖', '辛辣', '木质'] },
+    { id: 'black_pepper', name: '黑胡椒', family: '辛香调', color: '#2F4F4F', intensity: 9, notes: ['辛辣', '刺激', '现代'] },
+    { id: 'sage', name: '鼠尾草', family: '草本调', color: '#9DC183', intensity: 6, notes: ['草本', '清新', '男性化'] },
+    { id: 'thyme', name: '百里香', family: '草本调', color: '#708090', intensity: 6, notes: ['草本', '温暖', '芳香'] }
+  ],
+  base: [
+    { id: 'sandalwood', name: '檀香', family: '木质调', color: '#D2B48C', intensity: 6, notes: ['奶香', '温暖', '持久'] },
+    { id: 'cedarwood', name: '雪松', family: '木质调', color: '#8B4513', intensity: 7, notes: ['干燥', '木质', '稳定'] },
+    { id: 'vetiver', name: '香根草', family: '木质调', color: '#556B2F', intensity: 8, notes: ['泥土', '烟熏', '男性化'] },
+    { id: 'oud', name: '沉香', family: '木质调', color: '#4A3728', intensity: 10, notes: ['浓郁', '神秘', '中东'] },
+    { id: 'patchouli', name: '广藿香', family: '木质调', color: '#3D2B1F', intensity: 8, notes: ['泥土', '复古', '60年代'] },
+    { id: 'cypress', name: '丝柏', family: '木质调', color: '#2E4A3E', intensity: 7, notes: ['干燥', '清新', '木质'] },
+    { id: 'vanilla', name: '香草', family: '美食调', color: '#F5DEB3', intensity: 7, notes: ['甜美', '温暖', '美食'] },
+    { id: 'tonka_bean', name: '零陵香豆', family: '美食调', color: '#D2691E', intensity: 6, notes: ['杏仁', '甜美', '温暖'] },
+    { id: 'cocoa', name: '可可', family: '美食调', color: '#3D2B1F', intensity: 8, notes: ['巧克力', '甜美', '诱惑'] },
+    { id: 'caramel', name: '焦糖', family: '美食调', color: '#C68E17', intensity: 6, notes: ['甜美', '温暖', '粘稠'] },
+    { id: 'amber', name: '琥珀', family: '东方调', color: '#FFBF00', intensity: 7, notes: ['温暖', '树脂', '性感'] },
+    { id: 'benzoin', name: '安息香', family: '东方调', color: '#DAA520', intensity: 6, notes: ['香草', '温暖', '树脂'] },
+    { id: 'frankincense', name: '乳香', family: '东方调', color: '#FFFACD', intensity: 5, notes: ['焚香', '神圣', '飘渺'] },
+    { id: 'myrrh', name: '没药', family: '东方调', color: '#8B7355', intensity: 6, notes: ['焚香', '苦味', '神秘'] },
+    { id: 'labdanum', name: '劳丹脂', family: '东方调', color: '#8B4513', intensity: 7, notes: ['树脂', '温暖', '动物感'] },
+    { id: 'musk', name: '麝香', family: '动物调', color: '#F5F5DC', intensity: 5, notes: ['肌肤感', '性感', '持久'] },
+    { id: 'civet', name: '灵猫香', family: '动物调', color: '#A0522D', intensity: 8, notes: ['动物感', '强烈', '性感'] },
+    { id: 'castoreum', name: '海狸香', family: '动物调', color: '#4A3728', intensity: 7, notes: ['皮革', '动物感', '烟熏'] },
+    { id: 'leather', name: '皮革', family: '特殊调', color: '#3D2B1F', intensity: 7, notes: ['皮革', '烟熏', '复古'] },
+    { id: 'sea_breeze', name: '海洋', family: '特殊调', color: '#87CEEB', intensity: 5, notes: ['清新', '水感', '现代'] },
+    { id: 'smoke', name: '烟雾', family: '特殊调', color: '#696969', intensity: 8, notes: ['烟熏', '燃烧', '神秘'] }
+  ]
+};
+
+export const noteFamilies = {
+  '柑橘调': { color: '#FFD700', description: '清新明亮，给人活力感' },
+  '果香调': { color: '#FF6347', description: '甜美多汁，年轻活泼' },
+  '花香调': { color: '#FF69B4', description: '浪漫柔美，经典优雅' },
+  '辛香调': { color: '#D2691E', description: '温暖刺激，秋冬适用' },
+  '草本调': { color: '#228B22', description: '清新自然，中性感' },
+  '木质调': { color: '#8B4513', description: '稳定持久，成熟稳重' },
+  '美食调': { color: '#F5DEB3', description: '甜美诱人，年轻时尚' },
+  '东方调': { color: '#DAA520', description: '浓郁神秘，异域风情' },
+  '动物调': { color: '#A0522D', description: '性感温暖，肌肤感' },
+  '特殊调': { color: '#808080', description: '创新独特，现代感' }
+};
