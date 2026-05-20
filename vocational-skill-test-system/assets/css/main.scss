@@ -1,0 +1,104 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-container {
+  padding: 2rem 1.5rem;
+}
+
+.card {
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+.card-header {
+  border-radius: 8px 8px 0 0;
+}
+
+.button {
+  border-radius: 6px;
+}
+
+.input, .textarea, .select select {
+  border-radius: 6px;
+}
+
+.tag {
+  border-radius: 4px;
+}
+
+.table {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.question-card {
+  transition: all 0.3s ease;
+}
+
+.question-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.timer-display {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+}
+
+.progress-bar {
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.correct-answer {
+  background-color: #48c78e !important;
+  color: white !important;
+}
+
+.wrong-answer {
+  background-color: #f14668 !important;
+  color: white !important;
+}
+
+.score-display {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 2rem;
+}
+
+.level-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.level-elementary {
+  background-color: #effaf3;
+  color: #257942;
+}
+
+.level-intermediate {
+  background-color: #fff8e6;
+  color: #b85c00;
+}
+
+.level-advanced {
+  background-color: #feecf0;
+  color: #cc0f35;
+}
+
+.level-expert {
+  background-color: #eaf3ff;
+  color: #2962ff;
+}
