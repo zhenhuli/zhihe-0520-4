@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>木炭烧制工艺模拟器</title>
+  <link rel="stylesheet" href="css/all.min.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>🔥 传统木炭烧制工艺模拟器</h1>
+      <p class="subtitle">观察升温 · 恒温 · 缺氧炭化 · 冷却 全过程，理解传统烧炭的核心原理</p>
+    </header>
+
+    <main class="main">
+      <section class="canvas-wrap">
+        <canvas id="kiln" width="800" height="520"></canvas>
+        <div class="stage-badge" id="stageBadge">待点火</div>
+      </section>
+
+      <aside class="panel">
+        <h2>控制面板</h2>
+
+        <div class="control">
+          <label>目标烧制温度 <span class="value" id="tempVal">600</span> ℃</label>
+          <input type="range" id="targetTemp" min="300" max="900" step="10" value="600" />
+          <div class="hint">温度越低成品率越低，过高则易灰化</div>
+        </div>
+
+        <div class="control">
+          <label>恒温保温时长 <span class="value" id="holdVal">120</span> 分钟</label>
+          <input type="range" id="holdTime" min="30" max="360" step="10" value="120" />
+          <div class="hint">保温不足易夹生，过长损耗增大</div>
+        </div>
+
+        <div class="control">
+          <label>模拟速度 <span class="value" id="speedVal">60</span> x</label>
+          <input type="range" id="speed" min="10" max="600" step="10" value="60" />
+          <div class="hint">真实时间的压缩倍率</div>
+        </div>
+
+        <div class="control">
+          <label>木材种类</label>
+          <select id="woodType">
+            <option value="hard">硬木（栎木/柞木）- 致密耐烧</option>
+            <option value="soft">软木（松木/杨木）- 疏松易燃</option>
+            <option value="bamboo">竹材 - 出炭率中等</option>
+          </select>
+        </div>
+
+        <div class="actions">
+          <button id="btnStart" class="btn primary">🔥 点火开始</button>
+          <button id="btnPause" class="btn">⏸ 暂停</button>
+          <button id="btnReset" class="btn">🔄 重置</button>
+        </div>
+
+        <div class="info">
+          <h3>实时状态</h3>
+          <div class="row"><span>当前温度:</span><b id="curTemp">25 ℃</b></div>
+          <div class="row"><span>阶段:</span><b id="curStage">准备</b></div>
+          <div class="row"><span>模拟时间:</span><b id="curTime">0 分</b></div>
+          <div class="row"><span>氧气:</span><b id="curO2">21%</b></div>
+          <div class="row"><span>炭化进度:</span><b id="curProgress">0%</b></div>
+          <div class="row"><span>成品质量:</span><b id="curQuality">-</b></div>
+        </div>
+      </aside>
+    </main>
+
+    <section class="result" id="resultBox" hidden>
+      <h2>🏺 成品出炉</h2>
+      <div class="result-grid">
+        <canvas id="productCanvas" width="400" height="260"></canvas>
+        <div class="result-info">
+          <div class="row"><span>成品类型:</span><b id="rType">-</b></div>
+          <div class="row"><span>质量评级:</span><b id="rQuality">-</b></div>
+          <div class="row"><span>出炭率:</span><b id="rYield">-</b></div>
+          <div class="row"><span>表面状态:</span><b id="rSurface">-</b></div>
+          <div class="row"><span>燃烧值:</span><b id="rHeat">-</b></div>
+          <div class="row"><span>点评:</span><b id="rComment">-</b></div>
+        </div>
+      </div>
+      <p class="principle" id="principle"></p>
+    </section>
+
+    <footer class="app-footer">
+      <p>原理提示：传统烧炭的本质是在<strong>密闭缺氧</strong>环境下对木材进行<strong>干馏热解</strong>，
+        通过控制温度与时间脱去水分与挥发分，留下以固定碳为主的致密炭材。</p>
+    </footer>
+  </div>
+
+  <script src="js/all.min.js"></script>
+</body>
+</html>
