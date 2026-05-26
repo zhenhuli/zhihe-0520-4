@@ -1,0 +1,31 @@
+{
+  "name": "nature-sound-mix",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "自然白噪音混音工具 - 使用Web Audio API创建沉浸式自然音效体验",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "white-noise",
+    "nature-sounds",
+    "web-audio-api",
+    "relaxation",
+    "meditation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.0.0",
+    "rollup-plugin-css-only": "^4.3.0",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-serve": "^2.0.2"
+  },
+  "dependencies": {}
+}

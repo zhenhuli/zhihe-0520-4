@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自然白噪音混音工具</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <h1>🌿 自然白噪音混音</h1>
+      <p class="subtitle">打造专属的沉浸式自然音效体验</p>
+    </header>
+
+    <main class="app-main">
+      <div class="master-controls">
+        <div class="master-volume">
+          <label>总音量</label>
+          <input type="range" id="masterVolume" min="0" max="100" value="70">
+          <span id="masterVolumeValue">70%</span>
+        </div>
+        <button id="playAllBtn" class="play-btn">▶ 全部播放</button>
+        <button id="stopAllBtn" class="stop-btn">⏹ 全部停止</button>
+      </div>
+
+      <div class="sound-grid" id="soundGrid">
+      </div>
+
+      <div class="presets-section">
+        <h3>💾 混音预设</h3>
+        <div class="preset-controls">
+          <input type="text" id="presetName" placeholder="预设名称">
+          <button id="savePresetBtn" class="save-btn">保存预设</button>
+        </div>
+        <div class="presets-list" id="presetsList">
+        </div>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <p>使用 Web Audio API 生成 · 点击音效卡片开始体验</p>
+    </footer>
+  </div>
+
+  <script src="bundle.js"></script>
+</body>
+</html>
